@@ -10,10 +10,11 @@ import java.util.Random;
 
 public class CreateTestFile {
     static final String FILE_NAME = "testArray" + ".txt";
-    static final int ARRAY_SIZE = 3000;
+    static final int ARRAY_SIZE = 2500;
     static Random r = new Random();
 
     /**
+     * These numbers are not repeated within the same file.
      * Generates pseudo-random numbers and writes them into a file.
      * @param args - в сраку
      */

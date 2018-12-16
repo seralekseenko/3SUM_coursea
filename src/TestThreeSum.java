@@ -134,7 +134,7 @@ public class TestThreeSum {
             sum += i;
         }
         System.out.println(sum);
-        Double result = sum / array.length;
+        Double result = sum / array.length; //НЕ РАБОТАЕТ
         System.out.println(result);
 
         return result;
