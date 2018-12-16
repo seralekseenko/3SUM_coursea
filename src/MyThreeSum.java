@@ -22,7 +22,7 @@ class MyThreeSum {
         return count;
     }
 
-    static int count1(Integer[] m) {
+    static int count1(Integer[] m) { // N^3
         int N = m.length;
         int count = 0;
         int a = 0;
@@ -92,15 +92,15 @@ class MyThreeSum {
         return false;
     }
 
-    static int countWithBinarySearch(Integer[] m) {
+    static int countWithBinarySearch(Integer[] m) { // n log n + n*n log n  = n log n (1 + n)
 
-        Arrays.sort(m);
+        Arrays.sort(m); // n log n
         int N = m.length;
         int count = 0;
 
         for (int i = 0; i < N -2; i++) {
             for (int j = i + 1; j < N; j++) {
-                int thirdIndex = Arrays.binarySearch(m, j + 1, N,-(m[i] + m[j]));
+                int thirdIndex = Arrays.binarySearch(m, j + 1, N,-(m[i] + m[j])); // N^2 log n
                 if (thirdIndex > j) count++;
 
             }

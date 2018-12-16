@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class TestThreeSum {
-    private static final int NUMBER_OF_TESTS = 10;
+    private static final int NUMBER_OF_TESTS = 3;
 
     public static void main(String... args) {
         /*
@@ -35,10 +35,10 @@ public class TestThreeSum {
         /**
          * run the tests
          */
-        testCountBase(fromFile);
-        testCount1(fromFile);
+        testCountBase(localArray);
+        testCount1(localArray);
         //testCountWith2SUM(localArray);
-        testCountWithBinarySearch(fromFile);
+        testCountWithBinarySearch(localArray);
 
     }
 
@@ -120,7 +120,7 @@ public class TestThreeSum {
         System.out.println(s);
         System.out.println("Min score: " + Collections.min(tempScores));
         System.out.println("Max score: " + Collections.max(tempScores));
-//        System.out.println("Average score: " + (sum(scores)));
+        System.out.println("Average score: " + (sum(scores)));
     }
 
     /**
@@ -133,9 +133,9 @@ public class TestThreeSum {
         for (Double i : array) {
             sum += i;
         }
-        System.out.println(sum);
+        //System.out.println(sum);
         Double result = sum / array.length; //НЕ РАБОТАЕТ
-        System.out.println(result);
+        //System.out.println(result);
 
         return result;
     }
